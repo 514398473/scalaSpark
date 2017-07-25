@@ -21,6 +21,7 @@
         <encoding>UTF-8</encoding>
         <scala.version>2.10.6</scala.version>
         <scala.compat.version>2.10</scala.compat.version>
+        <spark.version>1.6.3</spark.version>
     </properties>
 
     <dependencies>
@@ -28,6 +29,11 @@
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+            <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
@@ -129,10 +135,12 @@
                                 </filter>
                             </filters>
                             <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>reference.conf</resource>
                                 </transformer>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass></mainClass> <!--main方法-->
                                 </transformer>
                             </transformers>

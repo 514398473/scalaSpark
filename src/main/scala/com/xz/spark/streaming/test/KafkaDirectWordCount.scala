@@ -2,7 +2,6 @@ package com.xz.spark.streaming.test
 
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.StreamingContext
-import org.scalatest.time.Seconds
 import org.apache.spark.streaming.Duration
 import org.apache.spark.streaming.Durations
 import org.apache.spark.streaming.kafka.KafkaUtils
