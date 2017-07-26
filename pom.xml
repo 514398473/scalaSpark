@@ -84,6 +84,12 @@
             <artifactId>spark-streaming-kafka_2.10</artifactId>
             <version>1.6.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.6</version>
+        </dependency>
     </dependencies>
     <build>
         <!--scala待编译的文件目录-->
